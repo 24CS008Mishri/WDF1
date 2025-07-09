@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <title>Course</title>
+    <style>
+
+        *{
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+    }
+
+    header {
+      background-color: #333;
+      padding: 15px 0;
+      position:sticky;
+      top: 0;
+      z-index: 1000;  
+    }
+
+    nav {
+      display: flex;
+      /*flex-wrap:wrap-reverse;*/
+      justify-content:center;
+    }
+
+    .nav-item {
+      display: flex;
+      position: relative; 
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      padding: 12px 16px;
+      display:flex;
+    }
+
+    nav a:hover {
+      background-color: #555;
+      border-radius: 4px;
+    }
+
+    .active {
+      background-color: #04AA6D;
+      border-radius: 4px;
+    }
+
+    /* Dropdown */
+    .dropdown {
+      display: none;
+      position: absolute;
+      top: 100%;
+      left: 0;
+      background-color: #444;
+      min-width: 180px;
+      border-radius: 4px;
+      z-index:1000;
+    }
+
+    .dropdown a {
+      padding: 10px 14px;
+      font-size: 14px;
+      white-space: nowrap;
+    }
+
+    .nav-item:hover .dropdown {
+      display: block;
+
+    }
+
+
+        /*table*/
+.container {
+  background-color: #fff;
+  padding: 30px;
+  border-radius: 8px;
+  max-width: 1000px;
+  margin: 0 auto;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.container h2 {
+  margin-bottom: 10px;
+  font-size: 24px;
+}
+
+.notice {
+  color: red;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+thead th {
+  background-color: #1976d2;
+  color: white;
+  padding: 12px;
+  text-align: left;
+}
+
+tbody td {
+  padding: 12px;
+  border-bottom: 1px solid #ccc;
+}
+
+input[type="radio"] {
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+}
+
+/*button*/
+.button {
+  background-color: #04AA6D;
+  color: white;
+  border: none;
+  padding: 12px 24px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 16px;
+  display: block;
+  margin: 20px auto 0;
+  width: auto;
+}
+
+.button:hover {
+  background-color: #038d5a;
+}
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            
+            <div class="nav-item"><a href ="profile.html" >Student Profile</a></div>
+            <div class="nav-item"><a href="home1.html">Time Table</a></div>
+            <div class="nav-item"><a href ="Attendance.html">Attendance </a></div>
+            <div class="nav-item"><a href="result.html">Result</a></div>
+            <div class="nav-item"><a href="settings.html">Settings</a></div>
+
+            
+            <div class="nav-item">
+              <a href="#"class ="active">More ▾</a>
+            
+              <div class="dropdown">
+
+              <a href="https://skill-augmentation.com">Skill Augmentation</a>
+              <a href="fees.html">Fees</a>
+              <a href="leave.html">Leave Application</a>
+              <a href="scholarship.html">Scholarship</a>
+              <a href="#Course"class ="active">Course Registration</a>
+
+              </div>
+            </div>
+            
+        </nav>  
+    </header>
+
+
+    <!--course table-->
+
+    <div class="container">
+    <h2>University Elective(s)</h2>
+    <p class="notice">Allow to select 1 Course(s)</p>
+
+    <table>
+      <thead>
+        <tr>
+          <th>Course Code</th>
+          <th>Course Name</th>
+          <th>Course Type</th>
+          <th>Course Credit</th>
+          <th>Selected</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>101</td>
+          <td>AN INTRODUCTION TO ARTIFICIAL INTELLIGENCE</td>
+          <td>PR</td>
+          <td>PR-2</td>
+          <td><input type="radio" name="elective" /></td>
+        </tr>
+        <tr>
+          <td>201</td>
+          <td>MONEY AND BANKING</td>
+          <td>PR</td>
+          <td>PR-2</td>
+          <td><input type="radio" name="elective" /></td>
+        </tr>
+        <tr>
+          <td>cs201</td>
+          <td>THE JOY OF COMPUTING USING PYTHON</td>
+          <td>PR</td>
+          <td>PR-2</td>
+          <td><input type="radio" name="elective" checked /></td>
+        </tr>
+        <tr>
+          <td>301</td>
+          <td>PYTHON FOR DATA SCIENCE</td>
+          <td>PR</td>
+          <td>PR-2</td>
+          <td><input type="radio" name="elective" /></td>
+        </tr>
+        <tr>
+          <td>EC01</td>
+          <td>SCIENTIFIC COMPUTING USING MATLAB</td>
+          <td>PR</td>
+          <td>PR-2</td>
+          <td><input type="radio" name="elective" /></td>
+        </tr>
+      </tbody>
+    </table>
+    <button type="submit" class="button">Submit</button>
+  </div>
+
+  
+</body>
+</html>

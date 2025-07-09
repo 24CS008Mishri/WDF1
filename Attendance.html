@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Attendance</title>
+  <style>
+    
+*{
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+    }
+
+    header {
+      background-color: #333;
+      padding: 15px 0;
+      position:sticky;
+      top: 0;
+      z-index: 1000;  
+    }
+
+    nav {
+      display: flex;
+      /*flex-wrap:wrap-reverse;*/
+      justify-content:center;
+    }
+
+    .nav-item {
+      display: flex;
+     position: relative; 
+      
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      padding: 12px 16px;
+      display:flex;
+    }
+
+    nav a:hover {
+      background-color: #555;
+      border-radius: 4px;
+    }
+
+    .active {
+      background-color: #04AA6D;
+      border-radius: 4px;
+    }
+
+    /* Dropdown */
+    .dropdown {
+      display: none;
+      position: absolute;
+      top: 100%;
+      left: 0;
+      background-color: #444;
+      min-width: 180px;
+      border-radius: 4px;
+      z-index: 1000;;
+    }
+
+    .dropdown a {
+      padding: 10px 14px;
+      font-size: 14px;
+      white-space: nowrap;
+    }
+
+    .nav-item:hover .dropdown {
+      display: block;
+
+    }
+    /* Card*/
+    .main-content {
+      padding: 40px;
+      display: flex;
+      justify-content: center;
+    }
+
+    .card-container {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 40px;
+      background: #f8f5f5;
+      padding: 40px;
+      border-radius: 12px;
+      width: 1000px;
+      max-width: 100%;
+    }
+
+    .card {
+      background-color:  #62ab90;
+      border-radius: 16px;
+      height: 150px;
+      width: 200px;
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+      overflow: hidden;
+      position: relative;
+      transition: width 0.4s ease;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+      cursor: pointer;
+    }
+
+    .card:hover {
+      width: 350px;
+    }
+
+    .progress {
+      width: 100px;
+      height: 100px;
+      border-radius: 50%;
+      
+      background-color: white;
+      margin-left: 20px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+      flex-shrink: 0;
+    }
+    
+    .inner-circle {
+      width: 60px;
+      height: 60px;
+      background-color:  #62ab90;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: bold;
+      color: white;
+      position: absolute;
+    }
+
+    .details {
+      opacity: 0;
+      margin-left: 20px;
+      color: white;
+      font-weight: bold;
+      transition: opacity 0.3s ease 0.1s;
+      white-space: nowrap;
+    }
+
+    .card:hover .details {
+      opacity: 1;
+    }
+
+    /* Footer */
+    footer {
+      text-align: center;
+      padding: 10px;
+      background-color: rgb(82, 83, 87);
+      color: white;
+      position: fixed;
+      z-index: 100;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+    }
+  </style>
+</head>
+<body>
+
+  
+  <header>
+    <nav>
+      <div class="nav-item"><a href="profile.html">Student Profile</a></div>
+      <div class="nav-item"><a href="home1.html">Time Table</a></div>
+      <div class="nav-item"><a href="Attendance.html" class="active">Attendance</a></div>
+      <div class="nav-item"><a href="result.html">Result</a></div>
+      <div class="nav-item"><a href="settings.html">Settings</a></div>
+      <div class="nav-item">
+        <a href="#">More ▾</a>
+        <div class="dropdown">
+          <a href="https://skill-augmentation.com">Skill Augmentation</a>
+          <a href="fees.html">Fees</a>
+          <a href="leave.html">Leave Application</a>
+          <a href="scholarship.html">Scholarship</a>
+          <a href="course.html">Course Registration</a>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <!-- Attendance Cards Section -->
+  <section class="main-content">
+    <div class="card-container">
+      <div class="card">
+        <div class="progress" style="background: conic-gradient( #555 85%, white 0% );">
+          <div class="inner-circle">C++</div>
+        </div>
+        <div class="details">4/5<br>85% </div>
+      </div>
+
+      <div class="card">
+        <div class="progress" style="background: conic-gradient( #555 75% ,  white  0% );">
+          <div class="inner-circle">IT203</div>
+        </div>
+        <div class="details">4/7<br>70% </div>
+      </div>
+
+      <div class="card">
+        <div class="progress" style="background: conic-gradient( #555 90%,white  0% );">
+          <div class="inner-circle">DSA</div>
+        </div>
+        <div class="details">4/5<br>90% </div>
+      </div>
+
+      <div class="card">
+        <div class="progress" style="background: conic-gradient( #555 60%, white  0% );">
+          <div class="inner-circle">Java</div>
+        </div>
+        <div class="details">2/3<br>60% </div>
+      </div>
+
+      <div class="card">
+        <div class="progress" style="background: conic-gradient( #555 50%,white  0% );">
+          <div class="inner-circle">Maths</div>
+        </div>
+        <div class="details">2/4<br>50% </div>
+      </div>
+
+      <div class="card">
+        <div class="progress" style="background: conic-gradient( #555 95%,white  0%);">
+          <div class="inner-circle">CN</div>
+        </div>
+        <div class="details">4/5<br>95% </div>
+      </div>
+    </div>
+  </section>
+
+  
+  <footer>
+  Location:
+  Contact us:
+</footer>
+
+</body>
+</html>
