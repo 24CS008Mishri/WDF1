@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="nav.css" />
+    <title>Scholarship</title>
+    <style>
+      
+      /*Form  */
+      .container {
+        position: relative;
+        left: 50%;
+        transform: translateX(-50%);
+        background-color: white;
+        padding: 25px;
+        border-radius: 10px;
+        width: 700px;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+      }
+
+      .container h2 {
+        text-align: center;
+        margin-bottom: 25px;
+        color: #333;
+      }
+
+      .form {
+        max-width: 500px;
+        margin: 0 auto;
+        font-size: 16px;
+      }
+
+      .form input,
+      .form textarea {
+        width: 100%;
+        padding: 10px;
+        margin-bottom: 20px;
+        border-radius: 6px;
+        border: 1px solid #ccc;
+        font-size: 14px;
+      }
+
+      .form button {
+        background-color: #04aa6d;
+        color: white;
+        border: none;
+        padding: 12px;
+        width: 100%;
+        border-radius: 6px;
+        cursor: pointer;
+        font-size: 16px;
+      }
+
+      .lform button:hover {
+        background-color: #038d5a;
+      }
+
+      /*  Table */
+      .table {
+        width: 90%;
+        margin: 0 auto;
+        border-collapse: collapse;
+      }
+
+      .table th,
+      .table td {
+        border: 1px solid #ccc;
+        padding: 10px;
+        text-align: center;
+      }
+
+      .table th {
+        background-color: #04aa6d;
+        color: white;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <nav>
+        <div class="nav-item"><a href="profile.html">Student Profile</a></div>
+        <div class="nav-item"><a href="home1.html">Time Table</a></div>
+        <div class="nav-item"><a href="Attendance.html">Attendance </a></div>
+        <div class="nav-item"><a href="result.html">Result</a></div>
+        <div class="nav-item"><a href="settings.html">Settings</a></div>
+
+        <div class="nav-item">
+          <a href="#" class="active">More ▾</a>
+
+          <div class="dropdown">
+            <a href="https://skill-augmentation.com">Skill Augmentation</a>
+            <a href="fees.html">Fees</a>
+            <a href="leave.html">Leave Application</a>
+            <a href="#Scholarship" class="active">Scholarship</a>
+            <a href="course.html">Course Registration</a>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <section id="Scholarship" style="padding: 40px">
+      <div class="container">
+        <h2>Request Scholarship</h2>
+        <form class="form">
+          <label>Student Name:</label><br />
+          <input type="text" required /><br /><br />
+
+          <label>Student ID:</label><br />
+          <input type="text" required /><br /><br />
+
+          <label>Reason:</label><br />
+          <textarea required></textarea><br /><br />
+
+          <label>Requested Amount:</label><br />
+          <input type="number" required /><br /><br />
+
+          <label>Upload Document:</label><br />
+          <input type="file" required /><br /><br />
+
+          <button type="submit">Submit</button>
+        </form>
+      </div>
+    </section>
+
+    <section id="Scholarship" style="padding: 40px">
+      <h2>Obtained Scholarships</h2>
+      <table class="table">
+        <tr>
+          <th>Student ID</th>
+          <th>Name</th>
+          <th>Amount</th>
+          <th>Status</th>
+          <th>Date</th>
+        </tr>
+        <tr>
+          <td>24CS008</td>
+          <td>Mishri</td>
+          <td>₹25,000</td>
+          <td>Approved</td>
+          <td>05-Jul-2025</td>
+        </tr>
+      </table>
+    </section>
+  </body>
+</html>

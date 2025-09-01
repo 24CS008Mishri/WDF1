@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="nav.css" />
+    <title>Result</title>
+    <style>
+      
+      /* Result */
+      .container {
+        max-width: 800px;
+        margin: 40px auto;
+        background-color: white;
+        padding: 30px;
+        border-radius: 12px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      }
+
+      h2 {
+        text-align: center;
+        margin-bottom: 30px;
+        color: #333;
+      }
+
+      table {
+        width: 100%;
+        border-collapse: collapse;
+      }
+
+      th,
+      td {
+        border: 1px solid #ccc;
+        padding: 12px;
+        text-align: center;
+      }
+
+      th {
+        background-color: #04aa6d;
+        color: white;
+      }
+
+      /*tr:nth-child(even) {
+      background-color: #f2f2f2;
+    }*/
+    </style>
+  </head>
+  <body>
+    <header>
+      <nav>
+        <div class="nav-item"><a href="profile.html">Student Profile</a></div>
+        <div class="nav-item"><a href="home1.html">Time Table</a></div>
+        <div class="nav-item"><a href="Attendance.html">Attendance</a></div>
+        <div class="nav-item">
+          <a href="result.html" class="active">Result</a>
+        </div>
+        <div class="nav-item"><a href="settings.html">Settings</a></div>
+        <div class="nav-item">
+          <a href="#">More ▾</a>
+          <div class="dropdown">
+            <a href="https://skill-augmentation.com">Skill Augmentation</a>
+            <a href="fees.html">Fees</a>
+            <a href="leave.html">Leave Application</a>
+            <a href="scholarship.html">Scholarship</a>
+            <a href="course.html">Course Registration</a>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <div class="container">
+      <h2>Semester Result</h2>
+      <table>
+        <tr>
+          <th>Subject</th>
+          <th>Marks Obtained</th>
+          <th>Total Marks</th>
+          <th>Grade</th>
+        </tr>
+        <tr>
+          <td>Mathematics</td>
+          <td>87</td>
+          <td>100</td>
+          <td>A</td>
+        </tr>
+        <tr>
+          <td>Computer Science</td>
+          <td>92</td>
+          <td>100</td>
+          <td>A+</td>
+        </tr>
+        <tr>
+          <td>Physics</td>
+          <td>78</td>
+          <td>100</td>
+          <td>B+</td>
+        </tr>
+        <tr>
+          <td>Communication Skills</td>
+          <td>85</td>
+          <td>100</td>
+          <td>A</td>
+        </tr>
+        <tr>
+          <td>Environmental Science</td>
+          <td>90</td>
+          <td>100</td>
+          <td>A</td>
+        </tr>
+      </table>
+    </div>
+  </body>
+</html>

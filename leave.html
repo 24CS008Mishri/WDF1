@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="nav.css" />
+    <title>title</title>
+
+    <style>
+      /* Leave */
+      .leave-section {
+        padding: 50px 20px;
+        display: flex;
+        justify-content: center;
+      }
+
+      .container {
+        background-color: white;
+        padding: 25px;
+        border-radius: 10px;
+        width: 700px;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+      }
+
+      .container h2 {
+        text-align: center;
+        margin-bottom: 25px;
+        color: #333;
+      }
+
+      .form label {
+        display: block;
+        margin-bottom: 8px;
+        font-weight: bold;
+        color: #333;
+      }
+
+      .form input,
+      .form textarea {
+        width: 100%;
+        padding: 10px;
+        margin-bottom: 20px;
+        border-radius: 6px;
+        border: 1px solid #ccc;
+        font-size: 14px;
+      }
+
+      .form button {
+        background-color: #04aa6d;
+        color: white;
+        border: none;
+        padding: 12px;
+        width: 100%;
+        border-radius: 6px;
+        cursor: pointer;
+        font-size: 16px;
+      }
+
+      .lform button:hover {
+        background-color: #038d5a;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <nav>
+        <div class="nav-item"><a href="profile.html">Student Profile</a></div>
+        <div class="nav-item"><a href="home1.html">Time Table</a></div>
+        <div class="nav-item"><a href="Attendance.html">Attendance </a></div>
+        <div class="nav-item"><a href="result.html">Result</a></div>
+        <div class="nav-item"><a href="settings.html">Settings</a></div>
+
+        <div class="nav-item">
+          <a href="#" class="active">More ▾</a>
+
+          <div class="dropdown">
+            <a href="https://skill-augmentation.com">Skill Augmentation</a>
+            <a href="fees.html">Fees</a>
+            <a href="#Leave" class="active">Leave Application</a>
+            <a href="scholarship.html">Scholarship</a>
+            <a href="course.html">Course Registration</a>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <!--Leave -->
+
+    <section id="Leave" class="leave-section">
+      <div class="container">
+        <h2>Leave Application Form</h2>
+        <form class="form">
+          <label for="name">Student Name:</label>
+          <input type="text" id="name" name="name" required />
+
+          <label for="id">Student ID:</label>
+          <input type="text" id="id" name="id" required />
+
+          <label for="from">From Date:</label>
+          <input type="date" id="from" name="from" required />
+
+          <label for="to">To Date:</label>
+          <input type="date" id="to" name="to" required />
+
+          <label for="reason">Reason for Leave:</label>
+          <textarea id="reason" name="reason" rows="4" required></textarea>
+
+          <button type="submit">Submit Application</button>
+        </form>
+      </div>
+    </section>
+  </body>
+</html>

@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="nav.css" />
+    <title>Home1</title>
+
+    <style>
+
+      /*timetable*/
+      .container {
+        display: flex;
+        height: auto;
+      }
+
+      .box {
+        width: 55%;
+        height: 500px;
+        background-color: #b5adb2;
+        border: 2px solid #333;
+        padding: 20px;
+        margin: 40px;
+        text-align: center;
+        font-size: 18px;
+        border-radius: 10px; /* optional: rounded corners */
+        box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2); /* optional: soft shadow */
+        z-index: 0;
+      }
+
+      .box img {
+        width: 100%;
+        height: 100%;
+        object-fit: contain; /* or 'cover' based on your goal */
+        border-radius: 8px; /* optional: to match the box corners */
+      }
+
+      .bt {
+        width: 45%;
+        height: 500px;
+        padding: 2px;
+        margin: 40px;
+        background-color: #ffffff;
+        gap: 100px;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      /* From Uiverse.io by cssbuttons-io */
+      button {
+        width: 100%;
+        height: 100px;
+        font-size: 17px;
+        padding: 10px;
+        font-weight: 500;
+        background: #62ab90;
+        color: white;
+        border: none;
+        position: relative;
+        overflow: hidden;
+        border-radius: 0.6em;
+        cursor: pointer;
+      }
+
+      .gradient {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        left: 0;
+        top: 0;
+        border-radius: 0.6em;
+        margin-top: -0.25em;
+      }
+
+      .label {
+        position: relative;
+        top: -1px;
+      }
+
+      .transition {
+        transition-timing-function: cubic-bezier(0.9, 0.9, 0.9, 0.9);
+        transition-duration: 500ms;
+        background-color: rgb(82, 83, 87);
+        border-radius: 9999px;
+        width: 0;
+        height: 0;
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+      }
+
+      button:hover .transition {
+        width: 14em;
+        height: 14em;
+      }
+
+      button:active {
+        transform: scale(0.97);
+      }
+
+      /*footer*/
+      footer {
+        text-align: center;
+        padding: 10px;
+        background-color: rgb(82, 83, 87);
+        color: white;
+        position: fixed;
+        z-index: 100;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+      }
+    </style>
+  </head>
+
+  <body>
+    <header>
+      <nav>
+        <div class="nav-item"><a href="profile.html">Student Profile</a></div>
+        <div class="nav-item">
+          <a href="#Time Table" class="active">Time Table</a>
+        </div>
+        <div class="nav-item"><a href="Attendance.html">Attendance </a></div>
+        <div class="nav-item"><a href="result.html">Result</a></div>
+        <div class="nav-item"><a href="settings.html">Settings</a></div>
+
+        <div class="nav-item">
+          <a href="#">More ▾</a>
+
+          <div class="dropdown">
+            <a href="https://skill-augmentation.com">Skill Augmentation</a>
+            <a href="fees.html">Fees</a>
+            <a href="leave.html">Leave Application</a>
+            <a href="scholarship.html">Scholarship</a>
+            <a href="course.html">Course Registration</a>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <!--TimeTable-->
+    <section id="TimeTable">
+      <div class="container">
+        <div class="box">
+          <a
+            href="C:\Users\mishr\OneDrive\Pictures\Screenshots\Screenshot 2025-07-03 223637.png"
+          >
+            <img
+              src="C:\Users\mishr\OneDrive\Pictures\Screenshots\Screenshot 2025-07-03 223637.png"
+              alt="Timetable Image"
+              width="200"
+            />
+          </a>
+        </div>
+
+        <div class="bt">
+          <button
+            onclick="window.location.href='https://sites.google.com/charusat.ac.in/itue203-wdf/home' "
+          >
+            <span class="transition"></span>
+            <span class="gradient"></span>
+            <span class="label">C++</span>
+          </button>
+          <button
+            onclick="window.location.href='https://sites.google.com/charusat.ac.in/itue203-wdf/home' "
+          >
+            <span class="transition"></span>
+            <span class="gradient"></span>
+            <span class="label">Java</span>
+          </button>
+          <button
+            onclick="window.location.href='https://sites.google.com/charusat.ac.in/itue203-wdf/home' "
+          >
+            <span class="transition"></span>
+            <span class="gradient"></span>
+            <span class="label">web</span>
+          </button>
+          <button
+            onclick="window.location.href='https://sites.google.com/charusat.ac.in/itue203-wdf/home' "
+          >
+            <span class="transition"></span>
+            <span class="gradient"></span>
+            <span class="label">CN</span>
+          </button>
+          <button
+            onclick="window.location.href='https://sites.google.com/charusat.ac.in/itue203-wdf/home' "
+          >
+            <span class="transition"></span>
+            <span class="gradient"></span>
+            <span class="label">Maths</span>
+          </button>
+          <button
+            onclick="window.location.href='https://sites.google.com/charusat.ac.in/itue203-wdf/home' "
+          >
+            <span class="transition"></span>
+            <span class="gradient"></span>
+            <span class="label">DSA</span>
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <footer>Location: Contact us:</footer>
+  </body>
+</html>

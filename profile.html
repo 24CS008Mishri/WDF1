@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Student Profile & Counselling</title>
+    <link rel="stylesheet" href="nav.css" />
+    <style>
+      /* Reset + base */
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+      body {
+        font-family: Arial, Helvetica, sans-serif;
+        background: #f6f8f9;
+        color: #222;
+      }
+
+      /* Ensure header/nav won't overlap content (override nav.css if it's fixed) */
+      header {
+        position: relative;
+        z-index: 10;
+      }
+      header nav {
+        position: relative !important;
+        top: auto !important;
+        width: 100%;
+        background: transparent !important;
+      }
+
+      .container {
+        max-width: 900px;
+        margin: 18px auto;
+        padding: 16px;
+      }
+
+      .card {
+        background: #fff;
+        padding: 18px;
+        border-radius: 10px;
+        box-shadow: 0 6px 18px rgba(0, 0, 0, 0.06);
+      }
+
+      .card h2 {
+        margin-bottom: 14px;
+        color: #222;
+        border-left: 5px solid #04aa6d;
+        padding-left: 10px;
+        font-size: 20px;
+      }
+
+      /* Desktop: a 2-column grid of profile items */
+      .profile-grid {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 12px;
+        background: #f0fbf6; /* light background box */
+        padding: 12px;
+        border-radius: 8px;
+      }
+
+      /* Each field is a row with label and value */
+      .profile-item {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 10px;
+        background: transparent;
+        border-radius: 6px;
+      }
+      .profile-item .label {
+        font-weight: 700;
+        color: #333;
+        margin-right: 8px;
+        white-space: nowrap;
+      }
+      .profile-item .value {
+        color: #111;
+        text-align: right;
+        word-break: break-word;
+      }
+
+      /* Achievements card styling */
+      .achievement {
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+        margin-top: 18px;
+        background: #f8fbff;
+        padding: 12px;
+        border-radius: 8px;
+      }
+      .form input[type="text"],
+      .form input[type="file"] {
+        padding: 10px;
+        border: 1px solid #d6dfe6;
+        border-radius: 6px;
+        font-size: 15px;
+      }
+      .button {
+        background: #04aa6d;
+        color: #fff;
+        border: none;
+        padding: 12px;
+        border-radius: 6px;
+        cursor: pointer;
+        font-size: 16px;
+      }
+      .button:hover {
+        background: #038d5a;
+      }
+
+      /* ---------------- MOBILE: force single vertical line ---------------- */
+      @media (max-width: 768px) {
+        .container {
+          padding: 12px;
+          margin: 12px auto;
+        }
+
+        /* Make profile-grid stack as a single column (one full-width item per row) */
+        .profile-grid {
+          display: block; /* block makes child .profile-item stack vertically */
+          padding: 8px;
+        }
+
+        .profile-item {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          padding: 12px;
+          border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+          background: #fff;
+          margin-bottom: 8px;
+        }
+        .profile-item:last-child {
+          border-bottom: none;
+          margin-bottom: 0;
+        }
+
+        /* Label on left, value on right (both on same line) */
+        .profile-item .label {
+          flex: 0 0 42%;
+          text-align: left;
+          white-space: normal;
+        }
+        .profile-item .value {
+          flex: 1 0 58%;
+          text-align: right;
+          word-break: break-word;
+        }
+      }
+
+      /* Extra small screens - ensure readability */
+      @media (max-width: 420px) {
+        .profile-item {
+          padding: 10px;
+        }
+        .profile-item .label {
+          font-size: 14px;
+        }
+        .profile-item .value {
+          font-size: 14px;
+        }
+        .card h2 {
+          font-size: 18px;
+        }
+        .button {
+          width: 100%;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <span class="hamburger">☰</span>
+      <nav>
+        <div class="nav-item">
+          <a href="#Profile" class="active">Student Profile</a>
+        </div>
+        <div class="nav-item"><a href="home1.html">Time Table</a></div>
+        <div class="nav-item"><a href="Attendance.html">Attendance</a></div>
+        <div class="nav-item"><a href="result.html">Result</a></div>
+        <div class="nav-item"><a href="settings.html">Settings</a></div>
+        <div class="nav-item">
+          <a href="#">More ▾</a>
+          <div class="dropdown">
+            <a href="https://skill-augmentation.com">Skill Augmentation</a>
+            <a href="fees.html">Fees</a>
+            <a href="#Leave">Leave Application</a>
+            <a href="scholarship.html">Scholarship</a>
+            <a href="course.html">Course Registration</a>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container">
+      <section class="card">
+        <h2>Student Profile</h2>
+
+        <!-- profile grid: each item contains label + value -->
+        <div class="profile-grid">
+          <div class="profile-item">
+            <span class="label">Name:</span><span class="value">Mishri</span>
+          </div>
+          <div class="profile-item">
+            <span class="label">Enrollment No.:</span
+            ><span class="value">24CS008</span>
+          </div>
+          <div class="profile-item">
+            <span class="label">Department:</span
+            ><span class="value">Computer Science</span>
+          </div>
+          <div class="profile-item">
+            <span class="label">Year:</span><span class="value">3rd sem</span>
+          </div>
+          <div class="profile-item">
+            <span class="label">Email:</span
+            ><span class="value">24cs008@charusat.edu.in</span>
+          </div>
+          <div class="profile-item">
+            <span class="label">Phone:</span><span class="value">+91-</span>
+          </div>
+        </div>
+
+        <div class="achievement">
+          <h3 style="margin: 0 0 6px 0">Achievements</h3>
+          <form class="form">
+            <label for="event-name"><strong>Event Name:</strong></label>
+            <input
+              type="text"
+              id="event-name"
+              name="event-name"
+              placeholder="Enter event name"
+              required
+            />
+            <label for="certificate"
+              ><strong>Upload Certificate:</strong></label
+            >
+            <input
+              type="file"
+              id="certificate"
+              name="certificate"
+              accept=".pdf,.jpg,.jpeg,.png"
+              required
+            />
+            <button type="submit" class="button">Submit Achievement</button>
+          </form>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>
